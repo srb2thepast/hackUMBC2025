@@ -1,0 +1,3 @@
+[gd_scene load_steps=0 format=3 uid="uid://btd7vm4ooabwp"]
+
+[node name="OutsideScene" type="Node2D"]

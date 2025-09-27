@@ -14,3 +14,7 @@ config/name="hackUMBC2025"
 run/main_scene="uid://wgqsl1sj8355"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DependencyManager="*res://dependency_manager.gd"

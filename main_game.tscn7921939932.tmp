@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://wgqsl1sj8355"]
 
 [ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
-[ext_resource type="Script" uid="uid://cspr3c4ndwvy0" path="res://door_manager.gd" id="2_6bm6p"]
+[ext_resource type="Script" path="res://test.gd" id="2_6bm6p"]
 [ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="2_ykeeq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dugkq"]
@@ -12,9 +12,10 @@ size = Vector2(106, 310)
 [node name="Player" parent="." instance=ExtResource("1_1oj5k")]
 position = Vector2(-3, -2)
 
-[node name="Doors" type="Node" parent="."]
+[node name="Doors" type="Node" parent="." node_paths=PackedStringArray("HallwayDoorCollider")]
 unique_name_in_owner = true
 script = ExtResource("2_6bm6p")
+HallwayDoorCollider = NodePath("HallwayDoor/CollisionShape2D")
 
 [node name="HallwayDoor" type="Node2D" parent="Doors"]
 position = Vector2(1086, 482)
