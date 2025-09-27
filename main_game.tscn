@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://wgqsl1sj8355"]
 
-[ext_resource type="Script" uid="uid://dgla6372hwuoq" path="res://movement.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://dgla6372hwuoq" path="res://movement.gd" id="1_yx7mw"]
+[ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="2_ykeeq"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_0e48y")
+script = ExtResource("1_yx7mw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(568, 310)
-texture = ExtResource("1_wtcfe")
+texture = ExtResource("2_ykeeq")
