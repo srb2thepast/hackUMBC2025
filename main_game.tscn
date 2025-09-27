@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://wgqsl1sj8355"]
+[gd_scene load_steps=4 format=3 uid="uid://wgqsl1sj8355"]
 
 [ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
-[ext_resource type="Script" uid="uid://cspr3c4ndwvy0" path="res://door_manager.gd" id="2_6bm6p"]
 [ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="2_ykeeq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dugkq"]
@@ -14,14 +13,13 @@ position = Vector2(-3, -2)
 
 [node name="Doors" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("2_6bm6p")
 
-[node name="HallwayDoor" type="Node2D" parent="Doors"]
+[node name="r1_to_r2" type="Node2D" parent="Doors"]
 position = Vector2(1086, 482)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/HallwayDoor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/r1_to_r2"]
 shape = SubResource("RectangleShape2D_dugkq")
 
-[node name="Sprite2D" type="Sprite2D" parent="Doors/HallwayDoor"]
+[node name="Sprite2D" type="Sprite2D" parent="Doors/r1_to_r2"]
 scale = Vector2(0.757813, 2.42188)
 texture = ExtResource("2_ykeeq")
