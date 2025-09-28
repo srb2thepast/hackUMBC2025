@@ -8,6 +8,10 @@ var t = 0.0
 @onready var main_game = Globals.getDependency("MainGame")
 
 
+@onready var closed_hand = $ClosedHand
+@onready var open_hand = $OpenHand
+
+
 enum States {
 	Dialouging,
 	Arcading,
@@ -26,23 +30,31 @@ func getPlayerNode():
 	return get_parent()
 
 
-
 func setCanMove(value):
 	can_move = value
+
 
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
+		if event.is_pressed():
+			closed_hand.visible = true
+			open_hand.visible = false
+		elif event.is_released():
+			closed_hand.visible = false
+			open_hand.visible = true
 		target_position = get_global_mouse_position()
-		if main_game.curRoom == 1:
-			var clampWall:CollisionShape2D = rooms.get_node("Room1").get_node("ClampZone")
-			target_position = Vector2(clamp(target_position.x,clampWall.position.x-clampWall.shape.size.x,clampWall.position.x+clampWall.shape.size.x),
-			clamp(target_position.y,clampWall.position.y,clampWall.position.y+clampWall.shape.size.y))
-		if main_game.curRoom == 2:
-			var clampWall:CollisionShape2D = rooms.get_node("Room2").get_node("ClampZone")
-			target_position = Vector2(clamp(target_position.x,clampWall.position.x-clampWall.shape.size.x,clampWall.position.x+clampWall.shape.size.x),
-			clamp(target_position.y,clampWall.position.y,clampWall.position.y+clampWall.shape.size.y))
+		
+		#if main_game.curRoom == 1:
+		#	var clampWall:CollisionShape2D = rooms.get_node("Room1").get_node("ClampZone")
+		#	target_position = Vector2(clamp(target_position.x,clampWall.position.x-clampWall.shape.size.x,clampWall.position.x+clampWall.shape.size.x),
+		#	clamp(target_position.y,clampWall.position.y,clampWall.position.y+clampWall.shape.size.y))
+		#if main_game.curRoom == 2:
+		#	var clampWall:CollisionShape2D = rooms.get_node("Room2").get_node("ClampZone")
+		#	target_position = Vector2(clamp(target_position.x,clampWall.position.x-clampWall.shape.size.x,clampWall.position.x+clampWall.shape.size.x),
+		#	clamp(target_position.y,clampWall.position.y,clampWall.position.y+clampWall.shape.size.y))
 		t=0
+		
 		#print("Mouse Click/Unclick at: ", event.position)
 		
 	elif event is InputEventMouseMotion:

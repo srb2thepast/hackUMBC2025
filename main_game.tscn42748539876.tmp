@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://wgqsl1sj8355"]
+[gd_scene load_steps=19 format=3 uid="uid://wgqsl1sj8355"]
 
 [ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
 [ext_resource type="Script" uid="uid://6f1ft2a3byu8" path="res://scripts/main_game_scripts/scene_switcher.gd" id="1_2pltu"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://cwiat0erayqnc" path="res://scripts/main_game_scripts/keypad_start.gd" id="7_krmtw"]
 [ext_resource type="Script" uid="uid://cje5bo8iipjrq" path="res://scripts/main_game_scripts/DA_doors1.gd" id="7_l5ukw"]
 [ext_resource type="Script" uid="uid://b3depqwk8o3m2" path="res://scripts/main_game_scripts/transition_to_room_2.gd" id="8_4srsv"]
-[ext_resource type="Texture2D" uid="uid://844ci8tnlrxr" path="res://Assets/Backgrounds/Scene2/Scene2.png" id="8_an1vu"]
 [ext_resource type="Texture2D" uid="uid://dmjeoqbj0piwf" path="res://Assets/Backgrounds/Scene1/Scene1(lights).png" id="9_mf81u"]
 [ext_resource type="Texture2D" uid="uid://bm8t0nt7c1d0t" path="res://Assets/Backgrounds/Scene1/Keypad.png" id="10_02kkc"]
 [ext_resource type="Script" path="res://r_2_to_r_1.gd" id="10_jgkyn"]
@@ -82,6 +81,11 @@ text = "dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge 
 
 [node name="Room2" type="Node2D" parent="Rooms"]
 
+[node name="Scene1(lights)" type="Sprite2D" parent="Rooms/Room2"]
+position = Vector2(1718, 300.00006)
+scale = Vector2(0.56467015, 0.5646701)
+texture = ExtResource("9_mf81u")
+
 [node name="CollisionShapet2D" type="CollisionShape2D" parent="Rooms/Room2"]
 position = Vector2(1728, 324)
 shape = SubResource("RectangleShape2D_4srsv")
@@ -108,11 +112,6 @@ position = Vector2(1371, 524)
 [node name="ClampZone" type="CollisionShape2D" parent="Rooms/Room2"]
 position = Vector2(1758, 504)
 shape = SubResource("RectangleShape2D_qpaub")
-
-[node name="Scene1(lights)" type="Sprite2D" parent="Rooms"]
-position = Vector2(1727.9065, 323.88483)
-scale = Vector2(0.60021347, 0.60021347)
-texture = ExtResource("8_an1vu")
 
 [node name="Keypad" type="Node2D" parent="Rooms"]
 script = ExtResource("11_jgkyn")
