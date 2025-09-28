@@ -1,24 +1,24 @@
-[gd_scene load_steps=25 format=3 uid="uid://wgqsl1sj8355"]
+[gd_scene load_steps=26 format=3 uid="uid://bd763fvba5fer"]
 
-[ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
-[ext_resource type="Script" uid="uid://6f1ft2a3byu8" path="res://scripts/main_game_scripts/scene_switcher.gd" id="1_2pltu"]
-[ext_resource type="Script" uid="uid://k4un1t77f2id" path="res://scripts/main_game_scripts/room1_listener.gd" id="2_dugkq"]
-[ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="2_ykeeq"]
-[ext_resource type="Script" uid="uid://cyxp6ah76n71j" path="res://DependencyAdders/DA_rooms.gd" id="3_f52ns"]
-[ext_resource type="Script" uid="uid://d0fwuhp1dyivc" path="res://scripts/main_game_scripts/dialouge.gd" id="3_ykeeq"]
-[ext_resource type="Script" uid="uid://y3oaj1wgyrpk" path="res://scripts/main_game_scripts/machine1button.gd" id="4_2pltu"]
-[ext_resource type="Script" uid="uid://cwiat0erayqnc" path="res://scripts/main_game_scripts/keypad_start.gd" id="7_krmtw"]
-[ext_resource type="Script" uid="uid://cje5bo8iipjrq" path="res://scripts/main_game_scripts/DA_doors1.gd" id="7_l5ukw"]
-[ext_resource type="Script" uid="uid://b3depqwk8o3m2" path="res://scripts/main_game_scripts/transition_to_room_2.gd" id="8_4srsv"]
-[ext_resource type="Texture2D" uid="uid://844ci8tnlrxr" path="res://Assets/Backgrounds/Scene2/Scene2.png" id="8_an1vu"]
-[ext_resource type="Texture2D" uid="uid://dmjeoqbj0piwf" path="res://Assets/Backgrounds/Scene1/Scene1(lights).png" id="9_mf81u"]
-[ext_resource type="Texture2D" uid="uid://bm8t0nt7c1d0t" path="res://Assets/Backgrounds/Scene1/Keypad.png" id="10_02kkc"]
-[ext_resource type="Texture2D" uid="uid://cyneh0qwangmp" path="res://Assets/Backgrounds/Scene3/Scene3.png" id="10_borgi"]
-[ext_resource type="Script" uid="uid://c3a7bi74inu3h" path="res://r_2_to_r_1.gd" id="10_jgkyn"]
-[ext_resource type="Script" uid="uid://drt6d5g5n4ccb" path="res://scripts/main_game_scripts/DA_Keypad.gd" id="11_jgkyn"]
-[ext_resource type="Script" uid="uid://0kovd7iqqjto" path="res://r_2_to_r_3.gd" id="14_umrn2"]
-[ext_resource type="Script" uid="uid://cdrw5lrey8sl2" path="res://r_3_to_r_2.gd" id="15_2i4tw"]
-[ext_resource type="Script" path="res://camera_2d.gd" id="15_qpaub"]
+[ext_resource type="Script" uid="uid://3ycewcxwaupb" path="res://post_pong_Switcher.gd" id="1_7j3dl"]
+[ext_resource type="Script" uid="uid://cyxp6ah76n71j" path="res://DependencyAdders/DA_rooms.gd" id="2_qmomq"]
+[ext_resource type="Script" uid="uid://k4un1t77f2id" path="res://scripts/main_game_scripts/room1_listener.gd" id="3_7o6kq"]
+[ext_resource type="Texture2D" uid="uid://dmjeoqbj0piwf" path="res://Assets/Backgrounds/Scene1/Scene1(lights).png" id="4_escrm"]
+[ext_resource type="Script" uid="uid://cwiat0erayqnc" path="res://scripts/main_game_scripts/keypad_start.gd" id="5_whuvm"]
+[ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="6_c410f"]
+[ext_resource type="Script" uid="uid://d0fwuhp1dyivc" path="res://scripts/main_game_scripts/dialouge.gd" id="7_jmfi7"]
+[ext_resource type="Texture2D" uid="uid://844ci8tnlrxr" path="res://Assets/Backgrounds/Scene2/Scene2.png" id="8_bxk5b"]
+[ext_resource type="Script" uid="uid://y3oaj1wgyrpk" path="res://scripts/main_game_scripts/machine1button.gd" id="9_4ytg0"]
+[ext_resource type="Texture2D" uid="uid://cyneh0qwangmp" path="res://Assets/Backgrounds/Scene3/Scene3.png" id="10_dhv5n"]
+[ext_resource type="Script" uid="uid://drt6d5g5n4ccb" path="res://scripts/main_game_scripts/DA_Keypad.gd" id="11_kb3lg"]
+[ext_resource type="Texture2D" uid="uid://bm8t0nt7c1d0t" path="res://Assets/Backgrounds/Scene1/Keypad.png" id="12_uuf1y"]
+[ext_resource type="Script" uid="uid://cje5bo8iipjrq" path="res://scripts/main_game_scripts/DA_doors1.gd" id="13_7fl5h"]
+[ext_resource type="Script" uid="uid://0kovd7iqqjto" path="res://r_2_to_r_3.gd" id="14_ylo6s"]
+[ext_resource type="Script" uid="uid://cdrw5lrey8sl2" path="res://r_3_to_r_2.gd" id="15_gw66w"]
+[ext_resource type="Script" uid="uid://c3a7bi74inu3h" path="res://r_2_to_r_1.gd" id="16_3xyvt"]
+[ext_resource type="Script" uid="uid://b3depqwk8o3m2" path="res://scripts/main_game_scripts/transition_to_room_2.gd" id="17_4p1iq"]
+[ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="18_t3dwj"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="19_vymbw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpaub"]
 size = Vector2(1154, 241)
@@ -29,6 +29,8 @@ size = Vector2(1152, 648)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ih6an"]
 size = Vector2(119, 200)
 
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7j3dl"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umrn2"]
 size = Vector2(111.5, 309.5)
 
@@ -36,19 +38,19 @@ size = Vector2(111.5, 309.5)
 size = Vector2(43.5, 305)
 
 [node name="Node2D2" type="Node2D"]
-script = ExtResource("1_2pltu")
+script = ExtResource("1_7j3dl")
 
 [node name="Rooms" type="Node2D" parent="."]
-script = ExtResource("3_f52ns")
+script = ExtResource("2_qmomq")
 
 [node name="Room1" type="Node2D" parent="Rooms"]
 position = Vector2(1, 0)
-script = ExtResource("2_dugkq")
+script = ExtResource("3_7o6kq")
 
 [node name="Scene1(lights)" type="Sprite2D" parent="Rooms/Room1"]
 position = Vector2(577, 325)
 scale = Vector2(0.56467015, 0.5646701)
-texture = ExtResource("9_mf81u")
+texture = ExtResource("4_escrm")
 
 [node name="Keypad" type="Node2D" parent="Rooms/Room1"]
 
@@ -58,12 +60,12 @@ offset_top = 276.0
 offset_right = 690.0
 offset_bottom = 325.0
 action_mode = 0
-script = ExtResource("7_krmtw")
+script = ExtResource("5_whuvm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Rooms/Room1/Keypad"]
 position = Vector2(1718.0001, 322)
 scale = Vector2(0.90234476, 1.2070313)
-texture = ExtResource("2_ykeeq")
+texture = ExtResource("6_c410f")
 
 [node name="ArcadeMachine" type="Node2D" parent="Rooms/Room1/Keypad"]
 position = Vector2(1, 0)
@@ -78,7 +80,7 @@ position = Vector2(581, 527.5)
 shape = SubResource("RectangleShape2D_qpaub")
 
 [node name="Dialouge" type="Node2D" parent="Rooms"]
-script = ExtResource("3_ykeeq")
+script = ExtResource("7_jmfi7")
 
 [node name="DisplayText" type="RichTextLabel" parent="Rooms/Dialouge"]
 offset_left = 153.0
@@ -99,7 +101,7 @@ shape = SubResource("RectangleShape2D_4srsv")
 [node name="Scene1(lights)" type="Sprite2D" parent="Rooms/Room2"]
 position = Vector2(1727.9065, 323.88483)
 scale = Vector2(0.60021347, 0.60021347)
-texture = ExtResource("8_an1vu")
+texture = ExtResource("8_bxk5b")
 
 [node name="ArcadeMachine" type="Node2D" parent="Rooms/Room2"]
 position = Vector2(1, 0)
@@ -110,7 +112,7 @@ offset_top = 186.0
 offset_right = 1647.0
 offset_bottom = 292.0
 action_mode = 0
-script = ExtResource("4_2pltu")
+script = ExtResource("9_4ytg0")
 
 [node name="LeftmostStart" type="Node2D" parent="Rooms/Room2"]
 position = Vector2(1251, 297)
@@ -139,12 +141,12 @@ offset_top = 107.0
 offset_right = 1801.0
 offset_bottom = 226.0
 action_mode = 0
-script = ExtResource("4_2pltu")
+script = ExtResource("9_4ytg0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Rooms/Room3/ArcadeMachine"]
 position = Vector2(1717.0001, 322)
 scale = Vector2(0.90234476, 1.2070313)
-texture = ExtResource("2_ykeeq")
+texture = ExtResource("6_c410f")
 
 [node name="ClampZone" type="CollisionShape2D" parent="Rooms/Room3"]
 visible = false
@@ -154,7 +156,7 @@ shape = SubResource("RectangleShape2D_qpaub")
 [node name="Scene3" type="Sprite2D" parent="Rooms/Room3"]
 position = Vector2(1728, 324)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("10_borgi")
+texture = ExtResource("10_dhv5n")
 
 [node name="START" type="Node2D" parent="Rooms/Room3"]
 position = Vector2(2625, 452)
@@ -168,15 +170,15 @@ offset_top = 246.0
 offset_right = 1918.0
 offset_bottom = 404.0
 action_mode = 0
-script = ExtResource("4_2pltu")
+script = ExtResource("9_4ytg0")
 
 [node name="Keypad" type="Node2D" parent="Rooms"]
-script = ExtResource("11_jgkyn")
+script = ExtResource("11_kb3lg")
 
 [node name="Keypad" type="Sprite2D" parent="Rooms/Keypad"]
 position = Vector2(543.00006, -495)
 scale = Vector2(0.5876157, 0.5876157)
-texture = ExtResource("10_02kkc")
+texture = ExtResource("12_uuf1y")
 
 [node name="Camera2D" type="Camera2D" parent="Rooms/Keypad/Keypad"]
 enabled = false
@@ -267,22 +269,27 @@ offset_bottom = -343.0
 
 [node name="Doors" type="Node2D" parent="Rooms"]
 position = Vector2(1, 0)
-script = ExtResource("7_l5ukw")
+script = ExtResource("13_7fl5h")
 
 [node name="r2_to_r3" type="Node2D" parent="Rooms/Doors"]
 position = Vector2(3682, 705)
-script = ExtResource("14_umrn2")
+script = ExtResource("14_ylo6s")
 
 [node name="Area2D" type="Area2D" parent="Rooms/Doors/r2_to_r3"]
 position = Vector2(-1594, -390)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Doors/r2_to_r3/Area2D"]
-position = Vector2(-72, -482)
+position = Vector2(-52, -71)
 shape = SubResource("RectangleShape2D_ih6an")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rooms/Doors/r2_to_r3/Area2D"]
+position = Vector2(-105, -74.09374)
+scale = Vector2(0.005737362, 0.12536623)
+texture = SubResource("NoiseTexture2D_7j3dl")
 
 [node name="r3_to_r2" type="Node2D" parent="Rooms/Doors"]
 position = Vector2(3682, 705)
-script = ExtResource("15_2i4tw")
+script = ExtResource("15_gw66w")
 
 [node name="Area2D" type="Area2D" parent="Rooms/Doors/r3_to_r2"]
 position = Vector2(-1594, -390)
@@ -293,7 +300,7 @@ shape = SubResource("RectangleShape2D_umrn2")
 
 [node name="r2_to_r1" type="Node2D" parent="Rooms/Doors"]
 position = Vector2(2812, 806)
-script = ExtResource("10_jgkyn")
+script = ExtResource("16_3xyvt")
 
 [node name="Area2D" type="Area2D" parent="Rooms/Doors/r2_to_r1"]
 position = Vector2(-1594, -390)
@@ -304,7 +311,7 @@ shape = SubResource("RectangleShape2D_dugkq")
 
 [node name="r1_to_r2" type="Node2D" parent="Rooms/Doors"]
 position = Vector2(1085, 482)
-script = ExtResource("8_4srsv")
+script = ExtResource("17_4p1iq")
 
 [node name="Area2D" type="Area2D" parent="Rooms/Doors/r1_to_r2"]
 
@@ -312,7 +319,7 @@ script = ExtResource("8_4srsv")
 position = Vector2(-54, -73.5)
 shape = SubResource("RectangleShape2D_dugkq")
 
-[node name="Player" parent="." instance=ExtResource("1_1oj5k")]
+[node name="Player" parent="." instance=ExtResource("18_t3dwj")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -328,7 +335,7 @@ shape = SubResource("RectangleShape2D_4srsv")
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 position_smoothing_enabled = true
-script = ExtResource("15_qpaub")
+script = ExtResource("19_vymbw")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 2648.0
@@ -336,7 +343,7 @@ offset_top = 282.0
 offset_right = 2724.0
 offset_bottom = 388.0
 action_mode = 0
-script = ExtResource("4_2pltu")
+script = ExtResource("9_4ytg0")
 
 [connection signal="pressed" from="Rooms/Keypad/1" to="Rooms/Keypad" method="_on__pressed_1"]
 [connection signal="pressed" from="Rooms/Keypad/2" to="Rooms/Keypad" method="_on__pressed_2"]
