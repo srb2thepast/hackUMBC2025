@@ -14,3 +14,17 @@ config/name="hackUMBC2025"
 run/main_scene="uid://f1npybaf0xle"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BgMusicMenu="*res://bg_Music_menu.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[importer_defaults]
+
+mp3={
+&"loop": true
+}
