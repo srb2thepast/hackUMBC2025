@@ -28,7 +28,7 @@ script = ExtResource("1_ludyb")
 
 [node name="SolidBlack" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(523, 217.00003)
+position = Vector2(776, 217.02924)
 scale = Vector2(3.2, 3.2400002)
 texture = ExtResource("1_4opyw")
 
@@ -46,17 +46,17 @@ position = Vector2(45, 104)
 scale = Vector2(1748067.6, -159416.02)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.0002734448, -0.0029169873)
+position = Vector2(0.00041817606, -0.0029171705)
 scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_m5tya")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.0002734448, 0.0015244968)
+position = Vector2(0.00041817606, 0.0015243136)
 scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_eipaa")
 
 [node name="PlayerGoal" type="Area2D" parent="."]
-position = Vector2(91, 13)
+position = Vector2(344, 13.029205)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerGoal"]
@@ -64,7 +64,7 @@ position = Vector2(80, 205.5)
 shape = SubResource("RectangleShape2D_ludyb")
 
 [node name="EnemyGoal" type="Area2D" parent="."]
-position = Vector2(931, 13)
+position = Vector2(1184, 13.029205)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyGoal"]
@@ -78,10 +78,10 @@ texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.021000002
 anchor_bottom = 0.037
-offset_left = 267.0
-offset_top = 8.0
-offset_right = 285.35
-offset_bottom = 37.024002
+offset_left = 520.0
+offset_top = 8.029205
+offset_right = 538.35
+offset_bottom = 37.053207
 theme_override_fonts/font = ExtResource("5_eipaa")
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -94,10 +94,10 @@ texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.021000002
 anchor_bottom = 0.037
-offset_left = 347.0
-offset_top = 8.0
-offset_right = 365.35
-offset_bottom = 37.024002
+offset_left = 600.0
+offset_top = 8.029205
+offset_right = 618.35
+offset_bottom = 37.053207
 theme_override_fonts/font = ExtResource("5_eipaa")
 theme_override_font_sizes/font_size = 50
 text = "0"
@@ -107,10 +107,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="message" type="Label" parent="HUD"]
 texture_filter = 1
-offset_left = 51.0
-offset_top = 112.0
-offset_right = 608.0
-offset_bottom = 208.0
+offset_left = 304.0
+offset_top = 112.029205
+offset_right = 861.0
+offset_bottom = 208.0292
 theme_override_fonts/font = ExtResource("7_trlu6")
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
@@ -119,10 +119,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="message2" type="Label" parent="HUD"]
 texture_filter = 1
-offset_left = 51.0
-offset_top = 368.0
-offset_right = 608.0
-offset_bottom = 464.0
+offset_left = 304.0
+offset_top = 368.0292
+offset_right = 861.0
+offset_bottom = 464.0292
 theme_override_fonts/font = ExtResource("7_trlu6")
 theme_override_font_sizes/font_size = 40
 text = "RESTART?"
@@ -132,10 +132,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="message3" type="Label" parent="HUD"]
 texture_filter = 1
-offset_left = 51.0
-offset_top = 424.0
-offset_right = 608.0
-offset_bottom = 520.0
+offset_left = 304.0
+offset_top = 424.0292
+offset_right = 861.0
+offset_bottom = 520.0292
 theme_override_fonts/font = ExtResource("7_trlu6")
 theme_override_font_sizes/font_size = 40
 text = "(SPACE)"
