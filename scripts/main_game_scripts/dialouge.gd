@@ -37,7 +37,8 @@ func getCurDialouge():
 func advance_dialouge():
 	cur_dialouge_advancement+= 1
 	if (cur_dialouge_advancement < len(dialougeList[cur_dialouge_index])):
-		displayed_text.text = getCurDialouge()
+		start_animation()
+		#displayed_text.text = getCurDialouge()
 	else:
 		dialouge_ended = true
 
@@ -49,7 +50,12 @@ func start_animation():
 
 var t = 0
 func _process(delta: float) -> void:
-	t += 0.4*delta
+	t += 40*delta
+	if not dialouge_ended:
+		var dialouge_focus:String = getCurDialouge()
+		var progress = clamp(int(t),1,len(dialouge_focus))
+		print(progress)
+		displayed_text.text = dialouge_focus.substr(0,progress)
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:

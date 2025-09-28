@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="hackUMBC2025"
-run/main_scene="uid://f1npybaf0xle"
+run/main_scene="uid://wgqsl1sj8355"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DependencyManager="*res://dependency_manager.gd"
-Globals="*res://scripts/globals.gd"
+Globals="*res://scripts/main_game_scripts/globals.gd"
 
 [editor_plugins]
 
