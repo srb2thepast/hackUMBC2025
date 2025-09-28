@@ -32,18 +32,18 @@ texture = ExtResource("2_ykeeq")
 
 [node name="ArcadeMachine" type="Node2D" parent="Room1"]
 
-[node name="Button" type="Button" parent="Room1/ArcadeMachine"]
-offset_left = 398.0
-offset_top = 175.0
-offset_right = 683.0
-offset_bottom = 235.0
-action_mode = 0
-script = ExtResource("4_2pltu")
-
 [node name="Sprite2D" type="Sprite2D" parent="Room1/ArcadeMachine"]
 position = Vector2(542, 202)
 scale = Vector2(2.11719, 0.367188)
 texture = ExtResource("2_ykeeq")
+
+[node name="Button" type="Button" parent="Room1/ArcadeMachine"]
+offset_left = 398.0
+offset_top = 175.0
+offset_right = 711.0
+offset_bottom = 237.0
+action_mode = 0
+script = ExtResource("4_2pltu")
 
 [node name="Dialouge" type="Node2D" parent="."]
 script = ExtResource("3_ykeeq")
