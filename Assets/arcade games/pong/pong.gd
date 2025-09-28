@@ -75,7 +75,7 @@ func end_match(player_won: bool) -> void:
 		restart_lbl.show()
 		space_lbl.show()
 
-# Simple restart with Enter/Space (ui_accept)
+# restart with Enter/Space (ui_accept)
 func _unhandled_input(event):
 	if game_over and event.is_action_pressed("restart"):
 		score = [0, 0]
