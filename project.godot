@@ -17,6 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+DependencyManager="*res://dependency_manager.gd"
+Globals="*res://scripts/main_game_scripts/globals.gd"
 BgMusicMenu="*res://bg_Music_menu.tscn"
 
 [editor_plugins]
