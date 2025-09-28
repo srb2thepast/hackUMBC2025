@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bbippemhheq8s"
-path="res://.godot/imported/OldSchoolAdventures-42j9.ttf-7ed48e9bbada283678d1472cff8dbb5b.fontdata"
+path="res://.godot/imported/OldSchoolAdventures-42j9.ttf-bc27873dd2b8c1ad4de96dece838bad1.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade_games/pong/fonts/OldSchoolAdventures-42j9.ttf"
-dest_files=["res://.godot/imported/OldSchoolAdventures-42j9.ttf-7ed48e9bbada283678d1472cff8dbb5b.fontdata"]
+source_file="res://assets/arcade_games/pong/fonts/OldSchoolAdventures-42j9.ttf"
+dest_files=["res://.godot/imported/OldSchoolAdventures-42j9.ttf-bc27873dd2b8c1ad4de96dece838bad1.fontdata"]
 
 [params]
 

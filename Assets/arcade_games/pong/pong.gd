@@ -79,7 +79,6 @@ func end_match(player_won: bool) -> void:
 
 # restart with Enter/Space (ui_accept)
 func _unhandled_input(event):
-	end_match(true)
 	if game_over and event.is_action_pressed("restart"):
 		score = [0, 0]
 		update_hud()

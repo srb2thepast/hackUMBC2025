@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpee7le7h5tqg"
-path="res://.godot/imported/pong sprite 1.png-e21856b75ce37b5aab48a5b26e4a31f1.ctex"
+path="res://.godot/imported/pong sprite 1.png-2d3192996fb9f7360822614b7b205634.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/arcade_games/pong/sprites/pong sprite 1.png"
-dest_files=["res://.godot/imported/pong sprite 1.png-e21856b75ce37b5aab48a5b26e4a31f1.ctex"]
+source_file="res://assets/arcade_games/pong/sprites/pong sprite 1.png"
+dest_files=["res://.godot/imported/pong sprite 1.png-2d3192996fb9f7360822614b7b205634.ctex"]
 
 [params]
 

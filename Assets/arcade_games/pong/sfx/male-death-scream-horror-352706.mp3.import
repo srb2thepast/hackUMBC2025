@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://diouru41km75w"
-path="res://.godot/imported/male-death-scream-horror-352706.mp3-4f58d34140d53e9402b0d5b0ddf11465.mp3str"
+path="res://.godot/imported/male-death-scream-horror-352706.mp3-0c9f7b367debdc18f86e3652d1c65b0c.mp3str"
 
 [deps]
 
-source_file="res://Assets/arcade_games/pong/sfx/male-death-scream-horror-352706.mp3"
-dest_files=["res://.godot/imported/male-death-scream-horror-352706.mp3-4f58d34140d53e9402b0d5b0ddf11465.mp3str"]
+source_file="res://assets/arcade_games/pong/sfx/male-death-scream-horror-352706.mp3"
+dest_files=["res://.godot/imported/male-death-scream-horror-352706.mp3-0c9f7b367debdc18f86e3652d1c65b0c.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c4s8su4tm5gt4"
-path="res://.godot/imported/DeterminationMonoWebRegular-Z5oq.ttf-d4ea8ac6e619bfc14acfb675a064ea88.fontdata"
+path="res://.godot/imported/DeterminationMonoWebRegular-Z5oq.ttf-e97044df021fe4efa649ee0be62efcec.fontdata"
 
 [deps]
 
-source_file="res://Assets/DeterminationMonoWebRegular-Z5oq.ttf"
-dest_files=["res://.godot/imported/DeterminationMonoWebRegular-Z5oq.ttf-d4ea8ac6e619bfc14acfb675a064ea88.fontdata"]
+source_file="res://assets/DeterminationMonoWebRegular-Z5oq.ttf"
+dest_files=["res://.godot/imported/DeterminationMonoWebRegular-Z5oq.ttf-e97044df021fe4efa649ee0be62efcec.fontdata"]
 
 [params]
 

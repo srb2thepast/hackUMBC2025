@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvp1pwfdcbg2a"
-path="res://.godot/imported/Scene1(no lights).png-da60b1350ed5e95c4e4df2f1f0d26340.ctex"
+path="res://.godot/imported/Scene1(no lights).png-3f1c89698c12f382123ee79c60c78fdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/Scene1/Scene1(no lights).png"
-dest_files=["res://.godot/imported/Scene1(no lights).png-da60b1350ed5e95c4e4df2f1f0d26340.ctex"]
+source_file="res://assets/Backgrounds/Scene1/Scene1(no lights).png"
+dest_files=["res://.godot/imported/Scene1(no lights).png-3f1c89698c12f382123ee79c60c78fdb.ctex"]
 
 [params]
 

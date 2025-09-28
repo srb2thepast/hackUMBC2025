@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dt5spf4jb6gw1"
-path="res://.godot/imported/impact-sound-effect-8-bit-retro-151796.mp3-f5b14f9e18fba86d9c14892471721c78.mp3str"
+path="res://.godot/imported/impact-sound-effect-8-bit-retro-151796.mp3-4686c87da3b23d1bd68dbe6135de5a67.mp3str"
 
 [deps]
 
-source_file="res://Assets/arcade_games/pong/sfx/impact-sound-effect-8-bit-retro-151796.mp3"
-dest_files=["res://.godot/imported/impact-sound-effect-8-bit-retro-151796.mp3-f5b14f9e18fba86d9c14892471721c78.mp3str"]
+source_file="res://assets/arcade_games/pong/sfx/impact-sound-effect-8-bit-retro-151796.mp3"
+dest_files=["res://.godot/imported/impact-sound-effect-8-bit-retro-151796.mp3-4686c87da3b23d1bd68dbe6135de5a67.mp3str"]
 
 [params]
 

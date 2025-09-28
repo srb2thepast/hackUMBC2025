@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://8k7pqip8tmnf"
-path="res://.godot/imported/MicronianAcademy-BW8gl.ttf-caaca7284c574562161cb0ea216bcba8.fontdata"
+path="res://.godot/imported/MicronianAcademy-BW8gl.ttf-74f9168cb0b329104e902d31b3b5feea.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade_games/pong/fonts/MicronianAcademy-BW8gl.ttf"
-dest_files=["res://.godot/imported/MicronianAcademy-BW8gl.ttf-caaca7284c574562161cb0ea216bcba8.fontdata"]
+source_file="res://assets/arcade_games/pong/fonts/MicronianAcademy-BW8gl.ttf"
+dest_files=["res://.godot/imported/MicronianAcademy-BW8gl.ttf-74f9168cb0b329104e902d31b3b5feea.fontdata"]
 
 [params]
 
