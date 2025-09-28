@@ -1,6 +1,5 @@
 extends Button
-@onready var Player:Node2D = get_parent().get_parent().get_parent().get_node("Player")
-@onready var PlayerBody:Node2D = Player.get_node("CharacterBody2D")
+@onready var PlayerBody:Node2D = Globals.getDependency("PlayerBody")
 
 
 func _pressed() -> void:

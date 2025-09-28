@@ -1,8 +1,7 @@
 extends Node2D
 
 @onready var displayed_text = $DisplayText
-@onready var player = get_parent().get_node("Player")
-@onready var playerBody = player.get_node("CharacterBody2D")
+@onready var playerbody = Globals.getDependency("PlayerBody")
 
 
 var dialougeList = {
@@ -47,11 +46,10 @@ func advance_dialouge():
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if advance_dialouge() == true:
-			print(player)
-			playerBody.setCanMove(true)
+			playerbody.setCanMove(true)
 			hide_dialouge()
 		else:
-			playerBody.setCanMove(false)
+			playerbody.setCanMove(false)
 
 func _ready() -> void:
 	displayed_text.text = "waiting for dialouge..."

@@ -1,7 +1,8 @@
 extends CollisionShape2D
 
 @onready var main_game:Node2D = get_parent().get_parent().get_parent()
-@onready var scene = main_game.get_node("Room1")
+@onready var rooms = main_game.get_node("Rooms")
+@onready var scene = rooms.get_node("Room1")
 @onready var doors:Node = scene.get_node("Doors")
 @onready var r1_to_r2_door:Node = doors.get_node("r1_to_r2")
 

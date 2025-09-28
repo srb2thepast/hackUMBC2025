@@ -14,7 +14,16 @@ enum States {
 	Idle
 }
 
+
 @export var can_move = true
+
+func _init() -> void:
+	Globals.setDependency("PlayerBody",self)
+
+func getPlayerNode():
+	return get_parent()
+
+
 
 func setCanMove(value):
 	can_move = value
