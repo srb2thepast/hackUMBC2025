@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq4duhluv2jsi"]
+
+[ext_resource type="Texture2D" uid="uid://d33i22qwtyy82" path="res://assets2/DJ_Mayhem_assets/sprites/disco_man.png" id="1_l6tho"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s551d"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(0, 0, 7, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjax8"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(7, 0, 7, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc1kf"]
+atlas = ExtResource("1_l6tho")
+region = Rect2(14, 0, 7, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0mr0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s551d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjax8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc1kf")
+}],
+"loop": true,
+"name": &"idle_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7tvf"]
+radius = 3.0
+
+[node name="Player2" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_0mr0g")
+animation = &"idle_walk"
+autoplay = "idle_walk"
+frame_progress = 0.009278821
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_v7tvf")
