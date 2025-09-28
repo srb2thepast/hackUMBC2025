@@ -6,14 +6,26 @@ extends Node2D
 
 var dialougeList = {
 	introduction = [
-		"I entered a bet",
-		"now im here",
-		"and im aboitu to meep a creepy old guy oh nooo n o no o"
-		
+		"I made a bet",
+		"and now im here...",
+		"Well, time to make the most of it."		
 	],
-	f = [
-		
-		
+	first_num = [
+		"2...I guess I gotta find the rest of the code."
+	],
+	pong_soul = [
+		"3 almost made it...8 were never found..."
+	],
+	pong_response = [
+		"Damn, these games ain't that hard...",
+		"Oh, 3 and 8. Got it."
+	],
+	djm_soul = [
+		"7 fought back...4 the first..."
+	],
+	djm_response = [
+		"So you all knew the first victim...Rest In Piece.",
+		"7 and 4. Now to get outta here!"
 	]
 }
 var dialouge_ended = false
