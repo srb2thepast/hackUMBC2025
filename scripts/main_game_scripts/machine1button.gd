@@ -5,4 +5,4 @@ extends Button
 func _pressed() -> void:
 	if PlayerBody.can_move:
 		print("button pressed!")
-		get_tree().change_scene_to_file("res://outside_scene.tscn")
+		get_tree().change_scene_to_file("res://Assets/arcade_games/pong/pong.tscn")

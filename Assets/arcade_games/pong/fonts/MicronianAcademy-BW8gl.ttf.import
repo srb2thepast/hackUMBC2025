@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bbippemhheq8s"
-path="res://.godot/imported/OldSchoolAdventures-42j9.ttf-d29bdea3f05f0701754c15cacf36051e.fontdata"
+uid="uid://8k7pqip8tmnf"
+path="res://.godot/imported/MicronianAcademy-BW8gl.ttf-caaca7284c574562161cb0ea216bcba8.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade games/pong/fonts/OldSchoolAdventures-42j9.ttf"
-dest_files=["res://.godot/imported/OldSchoolAdventures-42j9.ttf-d29bdea3f05f0701754c15cacf36051e.fontdata"]
+source_file="res://Assets/arcade_games/pong/fonts/MicronianAcademy-BW8gl.ttf"
+dest_files=["res://.godot/imported/MicronianAcademy-BW8gl.ttf-caaca7284c574562161cb0ea216bcba8.fontdata"]
 
 [params]
 

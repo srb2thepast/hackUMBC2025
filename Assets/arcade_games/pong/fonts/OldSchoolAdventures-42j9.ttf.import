@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cwunxmyfhpk46"
-path="res://.godot/imported/SevenSegmentiments-ywMVM.ttf-1e5b365d2845123e94e7ed78b3d5f302.fontdata"
+uid="uid://bbippemhheq8s"
+path="res://.godot/imported/OldSchoolAdventures-42j9.ttf-7ed48e9bbada283678d1472cff8dbb5b.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade games/pong/fonts/SevenSegmentiments-ywMVM.ttf"
-dest_files=["res://.godot/imported/SevenSegmentiments-ywMVM.ttf-1e5b365d2845123e94e7ed78b3d5f302.fontdata"]
+source_file="res://Assets/arcade_games/pong/fonts/OldSchoolAdventures-42j9.ttf"
+dest_files=["res://.godot/imported/OldSchoolAdventures-42j9.ttf-7ed48e9bbada283678d1472cff8dbb5b.fontdata"]
 
 [params]
 
