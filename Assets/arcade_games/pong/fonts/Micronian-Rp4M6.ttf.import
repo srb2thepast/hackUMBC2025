@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cn2fw5rvhvmfn"
-path="res://.godot/imported/Micronian-Rp4M6.ttf-fcd294f2c5c0c118c642c8cd8fd2409f.fontdata"
+path="res://.godot/imported/Micronian-Rp4M6.ttf-c7012f71049d89257d8f6f454a1eea1a.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade games/pong/fonts/Micronian-Rp4M6.ttf"
-dest_files=["res://.godot/imported/Micronian-Rp4M6.ttf-fcd294f2c5c0c118c642c8cd8fd2409f.fontdata"]
+source_file="res://Assets/arcade_games/pong/fonts/Micronian-Rp4M6.ttf"
+dest_files=["res://.godot/imported/Micronian-Rp4M6.ttf-c7012f71049d89257d8f6f454a1eea1a.fontdata"]
 
 [params]
 

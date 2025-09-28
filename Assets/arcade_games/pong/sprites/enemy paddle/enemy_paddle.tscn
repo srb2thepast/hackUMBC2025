@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://df2vxupb1w3vp"]
 
-[ext_resource type="Script" uid="uid://fjfx8r3lw2gs" path="res://Assets/arcade games/pong/sprites/enemy paddle/enemy_paddle.gd" id="1_1pk2y"]
-[ext_resource type="Script" uid="uid://c3xx0o5twgki2" path="res://pong_player.gd" id="2_1pk2y"]
-[ext_resource type="Texture2D" uid="uid://ddg3xpsog4o0v" path="res://Assets/arcade games/pong/sprites/pong spirte 2.png" id="2_24r1m"]
+[ext_resource type="Script" uid="uid://fjfx8r3lw2gs" path="res://Assets/arcade_games/pong/sprites/enemy paddle/enemy_paddle.gd" id="1_1pk2y"]
+[ext_resource type="Script" path="res://pong_player.gd" id="2_1pk2y"]
+[ext_resource type="Texture2D" uid="uid://ddg3xpsog4o0v" path="res://Assets/arcade_games/pong/sprites/pong spirte 2.png" id="2_24r1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itvdn"]
 size = Vector2(8, 27)

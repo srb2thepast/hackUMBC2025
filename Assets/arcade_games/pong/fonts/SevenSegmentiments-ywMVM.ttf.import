@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c4uuhc5ci1hhj"
-path="res://.godot/imported/SevenSegmentimentsOutline-9YwaL.ttf-54be8c667cdb7fa97843b92a4102eae6.fontdata"
+uid="uid://cwunxmyfhpk46"
+path="res://.godot/imported/SevenSegmentiments-ywMVM.ttf-5739bbe8a872d91f55a5cd9d79ab3f83.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade games/pong/fonts/SevenSegmentimentsOutline-9YwaL.ttf"
-dest_files=["res://.godot/imported/SevenSegmentimentsOutline-9YwaL.ttf-54be8c667cdb7fa97843b92a4102eae6.fontdata"]
+source_file="res://Assets/arcade_games/pong/fonts/SevenSegmentiments-ywMVM.ttf"
+dest_files=["res://.godot/imported/SevenSegmentiments-ywMVM.ttf-5739bbe8a872d91f55a5cd9d79ab3f83.fontdata"]
 
 [params]
 

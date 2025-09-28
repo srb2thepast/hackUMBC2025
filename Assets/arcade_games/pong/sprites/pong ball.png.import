@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpee7le7h5tqg"
-path="res://.godot/imported/pong sprite 1.png-cb4ad28786ce4bd25b9b27eab115954b.ctex"
+uid="uid://d3f2kww5t8r8s"
+path="res://.godot/imported/pong ball.png-68cbd909f29c61de1cb7bdb454ec4f70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/arcade games/pong/sprites/pong sprite 1.png"
-dest_files=["res://.godot/imported/pong sprite 1.png-cb4ad28786ce4bd25b9b27eab115954b.ctex"]
+source_file="res://Assets/arcade_games/pong/sprites/pong ball.png"
+dest_files=["res://.godot/imported/pong ball.png-68cbd909f29c61de1cb7bdb454ec4f70.ctex"]
 
 [params]
 
