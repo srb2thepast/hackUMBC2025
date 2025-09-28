@@ -11,10 +11,32 @@ config_version=5
 [application]
 
 config/name="hackUMBC2025"
+<<<<<<< Updated upstream
 run/main_scene="uid://da3ljcxyni7vj"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+=======
+run/main_scene="uid://wgqsl1sj8355"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+DependencyManager="*res://dependency_manager.gd"
+Globals="*res://scripts/main_game_scripts/globals.gd"
+BgMusicMenu="*res://bg_Music_menu.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[importer_defaults]
+
+mp3={
+&"loop": true
+}
+>>>>>>> Stashed changes
 
 [input]
 
