@@ -8,4 +8,4 @@ func _ready():
 	#print(r1_to_r2_door)
 
 func _physics_process(delta: float) -> void:
-	main_game.switchScene(2)
+	main_game.switchScene(1)
