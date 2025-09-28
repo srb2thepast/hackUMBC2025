@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 	if not dialouge_ended:
 		var dialouge_focus:String = getCurDialouge()
 		var progress = clamp(int(t),1,len(dialouge_focus))
-		print(progress)
+		#print(progress)
 		displayed_text.text = dialouge_focus.substr(0,progress)
 
 func _input(event):

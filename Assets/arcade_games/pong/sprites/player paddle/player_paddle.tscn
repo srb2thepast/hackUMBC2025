@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c54a3fxsifluy"]
 
-[ext_resource type="Texture2D" uid="uid://dpee7le7h5tqg" path="res://Assets/arcade games/pong/sprites/pong sprite 1.png" id="1_8d2og"]
-[ext_resource type="Script" uid="uid://csqwdcy1g356b" path="res://Assets/arcade games/pong/sprites/player paddle/player_paddle.gd" id="1_vacqw"]
+[ext_resource type="Texture2D" uid="uid://dpee7le7h5tqg" path="res://Assets/arcade_games/pong/sprites/pong sprite 1.png" id="1_8d2og"]
+[ext_resource type="Script" uid="uid://csqwdcy1g356b" path="res://Assets/arcade_games/pong/sprites/player paddle/player_paddle.gd" id="1_vacqw"]
 
 [sub_resource type="GDScript" id="GDScript_8d2og"]
 script/source = "extends Sprite2D

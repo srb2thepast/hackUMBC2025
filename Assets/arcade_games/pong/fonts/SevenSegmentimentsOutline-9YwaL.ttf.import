@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://8k7pqip8tmnf"
-path="res://.godot/imported/MicronianAcademy-BW8gl.ttf-4851696e18eb3df3029ad00f8f1aa3d2.fontdata"
+uid="uid://c4uuhc5ci1hhj"
+path="res://.godot/imported/SevenSegmentimentsOutline-9YwaL.ttf-d0337b85cb1e506555833ca07aa7a212.fontdata"
 
 [deps]
 
-source_file="res://Assets/arcade games/pong/fonts/MicronianAcademy-BW8gl.ttf"
-dest_files=["res://.godot/imported/MicronianAcademy-BW8gl.ttf-4851696e18eb3df3029ad00f8f1aa3d2.fontdata"]
+source_file="res://Assets/arcade_games/pong/fonts/SevenSegmentimentsOutline-9YwaL.ttf"
+dest_files=["res://.godot/imported/SevenSegmentimentsOutline-9YwaL.ttf-d0337b85cb1e506555833ca07aa7a212.fontdata"]
 
 [params]
 
