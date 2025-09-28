@@ -37,10 +37,12 @@ func getCurDialouge():
 func advance_dialouge():
 	cur_dialouge_advancement+= 1
 	if (cur_dialouge_advancement < len(dialougeList[cur_dialouge_index])):
+		visible = true
 		start_animation()
 		#displayed_text.text = getCurDialouge()
 	else:
 		dialouge_ended = true
+		visible = false
 
 	return dialouge_ended
 

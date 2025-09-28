@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2h0g8o77lky2"]
+
+[ext_resource type="Texture2D" uid="uid://d3f2kww5t8r8s" path="res://Assets/arcade games/pong/sprites/pong ball.png" id="1_7pyxi"]
+[ext_resource type="Script" uid="uid://bxdbrq0exsr24" path="res://Assets/arcade games/pong/sprites/ball/ball.gd" id="1_uymgm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uymgm"]
+radius = 3.535534
+
+[node name="ball" type="CharacterBody2D"]
+position = Vector2(0, 8)
+script = ExtResource("1_uymgm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -4.5)
+shape = SubResource("CircleShape2D_uymgm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -0.99999994)
+texture = ExtResource("1_7pyxi")
