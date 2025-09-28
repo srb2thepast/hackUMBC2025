@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://wgqsl1sj8355"]
+[gd_scene load_steps=16 format=3 uid="uid://wgqsl1sj8355"]
 
 [ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
 [ext_resource type="Script" uid="uid://6f1ft2a3byu8" path="res://scripts/main_game_scripts/scene_switcher.gd" id="1_2pltu"]
@@ -12,18 +12,13 @@
 [ext_resource type="Script" uid="uid://b3depqwk8o3m2" path="res://scripts/main_game_scripts/transition_to_room_2.gd" id="8_4srsv"]
 [ext_resource type="Texture2D" uid="uid://dmjeoqbj0piwf" path="res://Assets/Backgrounds/Scene1/Scene1(lights).png" id="9_mf81u"]
 [ext_resource type="Texture2D" uid="uid://bm8t0nt7c1d0t" path="res://Assets/Backgrounds/Scene1/Keypad.png" id="10_02kkc"]
-[ext_resource type="Script" uid="uid://c3a7bi74inu3h" path="res://r_2_to_r_1.gd" id="10_jgkyn"]
 [ext_resource type="Script" uid="uid://drt6d5g5n4ccb" path="res://scripts/main_game_scripts/DA_Keypad.gd" id="11_jgkyn"]
-[ext_resource type="Script" uid="uid://dqyxxbihclrju" path="res://camera_2d.gd" id="15_qpaub"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpaub"]
-size = Vector2(1154, 241)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dugkq"]
+size = Vector2(32, 305)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4srsv"]
 size = Vector2(1152, 648)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dugkq"]
-size = Vector2(43.5, 305)
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_2pltu")
@@ -39,6 +34,19 @@ script = ExtResource("2_dugkq")
 position = Vector2(577, 325)
 scale = Vector2(0.56467015, 0.5646701)
 texture = ExtResource("9_mf81u")
+
+[node name="Doors" type="Node2D" parent="Rooms/Room1"]
+script = ExtResource("7_l5ukw")
+
+[node name="r1_to_r2" type="Node2D" parent="Rooms/Room1/Doors"]
+position = Vector2(1085, 482)
+script = ExtResource("8_4srsv")
+
+[node name="Area2D" type="Area2D" parent="Rooms/Room1/Doors/r1_to_r2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room1/Doors/r1_to_r2/Area2D"]
+position = Vector2(-54, -73.5)
+shape = SubResource("RectangleShape2D_dugkq")
 
 [node name="Keypad" type="Node2D" parent="Rooms/Room1"]
 
@@ -57,14 +65,6 @@ texture = ExtResource("2_ykeeq")
 
 [node name="ArcadeMachine" type="Node2D" parent="Rooms/Room1/Keypad"]
 position = Vector2(1, 0)
-
-[node name="RightmostStart" type="Node2D" parent="Rooms/Room1"]
-position = Vector2(904, 488)
-scale = Vector2(0.56467015, 0.5646701)
-
-[node name="ClampZone" type="CollisionShape2D" parent="Rooms/Room1"]
-position = Vector2(581, 527.5)
-shape = SubResource("RectangleShape2D_qpaub")
 
 [node name="Dialouge" type="Node2D" parent="Rooms"]
 script = ExtResource("3_ykeeq")
@@ -102,11 +102,7 @@ scale = Vector2(0.90234476, 1.2070313)
 texture = ExtResource("2_ykeeq")
 
 [node name="LeftmostStart" type="Node2D" parent="Rooms/Room2"]
-position = Vector2(1371, 524)
-
-[node name="ClampZone" type="CollisionShape2D" parent="Rooms/Room2"]
-position = Vector2(1758, 504)
-shape = SubResource("RectangleShape2D_qpaub")
+position = Vector2(1200, 250)
 
 [node name="Keypad" type="Node2D" parent="Rooms"]
 script = ExtResource("11_jgkyn")
@@ -203,31 +199,6 @@ offset_top = -385.0
 offset_right = 668.0
 offset_bottom = -343.0
 
-[node name="Doors" type="Node2D" parent="Rooms"]
-position = Vector2(1, 0)
-script = ExtResource("7_l5ukw")
-
-[node name="r2_to_r1" type="Node2D" parent="Rooms/Doors"]
-position = Vector2(2812, 806)
-script = ExtResource("10_jgkyn")
-
-[node name="Area2D" type="Area2D" parent="Rooms/Doors/r2_to_r1"]
-position = Vector2(-1594, -390)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Doors/r2_to_r1/Area2D"]
-position = Vector2(-66, -1)
-shape = SubResource("RectangleShape2D_dugkq")
-
-[node name="r1_to_r2" type="Node2D" parent="Rooms/Doors"]
-position = Vector2(1085, 482)
-script = ExtResource("8_4srsv")
-
-[node name="Area2D" type="Area2D" parent="Rooms/Doors/r1_to_r2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Doors/r1_to_r2/Area2D"]
-position = Vector2(-54, -73.5)
-shape = SubResource("RectangleShape2D_dugkq")
-
 [node name="Player" parent="." instance=ExtResource("1_1oj5k")]
 position = Vector2(-3, -2)
 
@@ -241,11 +212,6 @@ offset_bottom = 40.0
 visible = false
 position = Vector2(576, 324)
 shape = SubResource("RectangleShape2D_4srsv")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-position_smoothing_enabled = true
-script = ExtResource("15_qpaub")
 
 [connection signal="pressed" from="Rooms/Keypad/1" to="Rooms/Keypad" method="_on__pressed_1"]
 [connection signal="pressed" from="Rooms/Keypad/2" to="Rooms/Keypad" method="_on__pressed_2"]

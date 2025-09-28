@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 
-var mouse_position = Vector2(0,0)
+@export var target_position = Vector2(0,0)
 var t = 0.0
 
+@onready var rooms = Globals.getDependency("Rooms")
+@onready var main_game = Globals.getDependency("MainGame")
 
 
 enum States {
@@ -31,7 +33,15 @@ func setCanMove(value):
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
-		mouse_position = event.position
+		target_position = get_global_mouse_position()
+		if main_game.curRoom == 1:
+			var clampWall:CollisionShape2D = rooms.get_node("Room1").get_node("ClampZone")
+			target_position = Vector2(clamp(target_position.x,clampWall.position.x-clampWall.shape.size.x,clampWall.position.x+clampWall.shape.size.x),
+			clamp(target_position.y,clampWall.position.y,clampWall.position.y+clampWall.shape.size.y))
+		if main_game.curRoom == 2:
+			var clampWall:CollisionShape2D = rooms.get_node("Room2").get_node("ClampZone")
+			target_position = Vector2(clamp(target_position.x,clampWall.position.x-clampWall.shape.size.x,clampWall.position.x+clampWall.shape.size.x),
+			clamp(target_position.y,clampWall.position.y,clampWall.position.y+clampWall.shape.size.y))
 		t=0
 		#print("Mouse Click/Unclick at: ", event.position)
 		
@@ -43,8 +53,8 @@ func _input(event):
 func _physics_process(delta: float) -> void:
 #	print(can_move)
 	if (can_move):
-		t += delta * 0.1
-		position = position.lerp(mouse_position,t)
+		t += delta * (0.1 + clamp(10/(max(target_position.distance_to(position),10)+0.1),0,100))
+		position = position.lerp(target_position,t)
 		move_and_slide()
 	else:
 		position = position

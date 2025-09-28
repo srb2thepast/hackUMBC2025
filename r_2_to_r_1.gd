@@ -7,10 +7,10 @@ extends Node2D
 @onready var rooms = Globals.getDependency("Rooms")
 
 func switchRoom():
-	main_game.switchScene(2)
+	main_game.switchScene(1)
 	
-	var spos = rooms.get_node("Room2").get_node("LeftmostStart").position
-	player.position = spos
+	var spos = rooms.get_node("Room1").get_node("RightmostStart").position
+	player.position =  spos
 	player.target_position = spos
 
 func collidesWith(incoming_hitbox:Area2D):
