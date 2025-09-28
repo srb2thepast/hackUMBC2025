@@ -43,6 +43,14 @@ func advance_dialouge():
 
 	return dialouge_ended
 
+func start_animation():
+	t=0
+
+
+var t = 0
+func _process(delta: float) -> void:
+	t += 0.4*delta
+
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if advance_dialouge() == true:
