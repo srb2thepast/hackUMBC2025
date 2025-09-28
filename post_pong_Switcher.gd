@@ -4,8 +4,7 @@ extends Node2D
 @onready var rooms = Globals.getDependency("Rooms")
 @onready var camera:Camera2D = Globals.getDependency("Camera")
 @export var curRoom = 2
-
-
+	
 func _init():
 	Globals.setDependency("MainGame",self)
 
@@ -24,7 +23,8 @@ func setCam(type):
 		camera.enabled = true
 
 func _ready():
-	switchScene(1)
+	switchScene(2)
+
 
 
 func _on__pressed_3() -> void:
