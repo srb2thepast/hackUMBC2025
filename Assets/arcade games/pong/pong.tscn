@@ -1,0 +1,168 @@
+[gd_scene load_steps=16 format=3 uid="uid://dcp64s1vkyiy8"]
+
+[ext_resource type="Texture2D" uid="uid://lxkklwh7dnyu" path="res://Assets/arcade games/pong/sprites/Solid_black.png" id="1_4opyw"]
+[ext_resource type="Script" uid="uid://df1ecapds66ke" path="res://Assets/arcade games/pong/pong.gd" id="1_ludyb"]
+[ext_resource type="PackedScene" uid="uid://c54a3fxsifluy" path="res://Assets/arcade games/pong/sprites/player paddle/player_paddle.tscn" id="2_pkvn5"]
+[ext_resource type="PackedScene" uid="uid://b2h0g8o77lky2" path="res://Assets/arcade games/pong/sprites/ball/ball.tscn" id="3_pkvn5"]
+[ext_resource type="PackedScene" uid="uid://df2vxupb1w3vp" path="res://Assets/arcade games/pong/sprites/enemy paddle/enemy_paddle.tscn" id="4_m5tya"]
+[ext_resource type="FontFile" uid="uid://cwunxmyfhpk46" path="res://Assets/arcade games/pong/fonts/SevenSegmentiments-ywMVM.ttf" id="5_eipaa"]
+[ext_resource type="FontFile" uid="uid://bbippemhheq8s" path="res://Assets/arcade games/pong/fonts/OldSchoolAdventures-42j9.ttf" id="7_trlu6"]
+[ext_resource type="AudioStream" uid="uid://dybpcbbh4svlm" path="res://Assets/arcade games/pong/sfx/8-bit-video-game-win-level-sound-version-1-145827.mp3" id="8_iwa0j"]
+[ext_resource type="AudioStream" uid="uid://bte4f2p66s41x" path="res://Assets/arcade games/pong/sfx/marcha-funebre-8-bits-260615.mp3" id="9_bb6i3"]
+[ext_resource type="AudioStream" uid="uid://diouru41km75w" path="res://Assets/arcade games/pong/sfx/male-death-scream-horror-352706.mp3" id="10_i1h74"]
+[ext_resource type="AudioStream" uid="uid://dt5spf4jb6gw1" path="res://Assets/arcade games/pong/sfx/impact-sound-effect-8-bit-retro-151796.mp3" id="11_i1h74"]
+[ext_resource type="AudioStream" uid="uid://ga1uxw0ctxnj" path="res://Assets/arcade games/pong/sfx/retro-blip-236676.mp3" id="12_f1tab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5tya"]
+size = Vector2(36.611855, 35.10991)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eipaa"]
+size = Vector2(36.611855, 40.10989)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ludyb"]
+size = Vector2(64, 629)
+
+[node name="main" type="Node2D"]
+position = Vector2(-200, 107)
+script = ExtResource("1_ludyb")
+
+[node name="SolidBlack" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(776, 217.02924)
+scale = Vector2(3.2, 3.2400002)
+texture = ExtResource("1_4opyw")
+
+[node name="playerPaddle" parent="SolidBlack" instance=ExtResource("2_pkvn5")]
+position = Vector2(-82.5, 1.2345554)
+
+[node name="ball" parent="SolidBlack" instance=ExtResource("3_pkvn5")]
+position = Vector2(8.821487e-06, 3.7036903)
+
+[node name="enemyPaddle" parent="SolidBlack" instance=ExtResource("4_m5tya")]
+position = Vector2(82.5, 1.2345612)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(45, 104)
+scale = Vector2(1748067.6, -159416.02)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.00041817606, -0.0029171705)
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("RectangleShape2D_m5tya")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.00041817606, 0.0015243136)
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("RectangleShape2D_eipaa")
+
+[node name="PlayerGoal" type="Area2D" parent="."]
+position = Vector2(344, 13.029205)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerGoal"]
+position = Vector2(80, 205.5)
+shape = SubResource("RectangleShape2D_ludyb")
+
+[node name="EnemyGoal" type="Area2D" parent="."]
+position = Vector2(1184, 13.029205)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyGoal"]
+position = Vector2(-56, 203)
+shape = SubResource("RectangleShape2D_ludyb")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="playerScore" type="Label" parent="HUD"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 0.021000002
+anchor_bottom = 0.037
+offset_left = 520.0
+offset_top = 8.029205
+offset_right = 538.35
+offset_bottom = 37.053207
+theme_override_fonts/font = ExtResource("5_eipaa")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="cpuScore" type="Label" parent="HUD"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 0.021000002
+anchor_bottom = 0.037
+offset_left = 600.0
+offset_top = 8.029205
+offset_right = 618.35
+offset_bottom = 37.053207
+theme_override_fonts/font = ExtResource("5_eipaa")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="message" type="Label" parent="HUD"]
+texture_filter = 1
+offset_left = 304.0
+offset_top = 112.029205
+offset_right = 861.0
+offset_bottom = 208.0292
+theme_override_fonts/font = ExtResource("7_trlu6")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="message2" type="Label" parent="HUD"]
+texture_filter = 1
+offset_left = 304.0
+offset_top = 368.0292
+offset_right = 861.0
+offset_bottom = 464.0292
+theme_override_fonts/font = ExtResource("7_trlu6")
+theme_override_font_sizes/font_size = 40
+text = "RESTART?"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="message3" type="Label" parent="HUD"]
+texture_filter = 1
+offset_left = 304.0
+offset_top = 424.0292
+offset_right = 861.0
+offset_bottom = 520.0292
+theme_override_fonts/font = ExtResource("7_trlu6")
+theme_override_font_sizes/font_size = 40
+text = "(SPACE)"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BallTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="win_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_iwa0j")
+
+[node name="lose_sound_1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_bb6i3")
+
+[node name="lose_sound_2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_i1h74")
+
+[node name="bounce" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_i1h74")
+
+[node name="goal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_f1tab")
+
+[connection signal="body_entered" from="PlayerGoal" to="." method="_on_player_goal_body_entered"]
+[connection signal="body_entered" from="EnemyGoal" to="." method="_on_enemy_goal_body_entered"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
