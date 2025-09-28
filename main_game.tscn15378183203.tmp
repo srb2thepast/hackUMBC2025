@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://wgqsl1sj8355"]
+[gd_scene load_steps=9 format=3 uid="uid://wgqsl1sj8355"]
 
 [ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
 [ext_resource type="Script" uid="uid://6f1ft2a3byu8" path="res://scene_switcher.gd" id="1_2pltu"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://cyxp6ah76n71j" path="res://DependencyAdders/DA_rooms.gd" id="3_f52ns"]
 [ext_resource type="Script" uid="uid://d0fwuhp1dyivc" path="res://dialouge.gd" id="3_ykeeq"]
 [ext_resource type="Script" uid="uid://y3oaj1wgyrpk" path="res://machine1button.gd" id="4_2pltu"]
-[ext_resource type="Script" uid="uid://cje5bo8iipjrq" path="res://DA_doors1.gd" id="7_l5ukw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dugkq"]
 size = Vector2(106, 310)
@@ -41,7 +40,6 @@ scale = Vector2(2.11719, 0.367188)
 texture = ExtResource("2_ykeeq")
 
 [node name="Doors" type="Node2D" parent="Rooms/Room1"]
-script = ExtResource("7_l5ukw")
 
 [node name="r1_to_r2" type="Node2D" parent="Rooms/Room1/Doors"]
 position = Vector2(1085, 482)
@@ -67,9 +65,3 @@ text = "dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge 
 [node name="Frame" type="Sprite2D" parent="Rooms/Dialouge"]
 
 [node name="Room2" type="Node2D" parent="Rooms"]
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0

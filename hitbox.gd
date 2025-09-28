@@ -1,18 +1,11 @@
 extends CollisionShape2D
 
-@onready var main_game:Node2D = get_parent().get_parent().get_parent()
-@onready var rooms = main_game.get_node("Rooms")
-@onready var scene = rooms.get_node("Room1")
-@onready var doors:Node = scene.get_node("Doors")
-@onready var r1_to_r2_door:Node = doors.get_node("r1_to_r2")
+@onready var main_game:Node2D = Globals.getDependency("MainGame")
+@onready var doors:Node = Globals.getDependency("Doors")
 
 func _ready():
-	print(main_game)
-	print(scene)
-	print(scene.get_children())
-	print(doors)
-	print(r1_to_r2_door)
-	
+	pass
+	#print(r1_to_r2_door)
 
-func _init():
-	print("hi")
+func _physics_process(delta: float) -> void:
+	main_game.switchScene(2)
