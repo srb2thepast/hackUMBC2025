@@ -1,0 +1,264 @@
+[gd_scene load_steps=19 format=3 uid="uid://wgqsl1sj8355"]
+
+[ext_resource type="PackedScene" uid="uid://dlbl80vohn874" path="res://player.tscn" id="1_1oj5k"]
+[ext_resource type="Script" uid="uid://6f1ft2a3byu8" path="res://scripts/main_game_scripts/scene_switcher.gd" id="1_2pltu"]
+[ext_resource type="Script" uid="uid://k4un1t77f2id" path="res://scripts/main_game_scripts/room1_listener.gd" id="2_dugkq"]
+[ext_resource type="Texture2D" uid="uid://c2j5pvpg7hy30" path="res://icon.svg" id="2_ykeeq"]
+[ext_resource type="Script" uid="uid://cyxp6ah76n71j" path="res://DependencyAdders/DA_rooms.gd" id="3_f52ns"]
+[ext_resource type="Script" uid="uid://d0fwuhp1dyivc" path="res://scripts/main_game_scripts/dialouge.gd" id="3_ykeeq"]
+[ext_resource type="Script" uid="uid://y3oaj1wgyrpk" path="res://scripts/main_game_scripts/machine1button.gd" id="4_2pltu"]
+[ext_resource type="Script" uid="uid://cwiat0erayqnc" path="res://scripts/main_game_scripts/keypad_start.gd" id="7_krmtw"]
+[ext_resource type="Script" uid="uid://cje5bo8iipjrq" path="res://scripts/main_game_scripts/DA_doors1.gd" id="7_l5ukw"]
+[ext_resource type="Script" uid="uid://b3depqwk8o3m2" path="res://scripts/main_game_scripts/transition_to_room_2.gd" id="8_4srsv"]
+[ext_resource type="Texture2D" uid="uid://dmjeoqbj0piwf" path="res://Assets/Backgrounds/Scene1/Scene1(lights).png" id="9_mf81u"]
+[ext_resource type="Texture2D" uid="uid://bm8t0nt7c1d0t" path="res://Assets/Backgrounds/Scene1/Keypad.png" id="10_02kkc"]
+[ext_resource type="Script" path="res://r_2_to_r_1.gd" id="10_jgkyn"]
+[ext_resource type="Script" uid="uid://drt6d5g5n4ccb" path="res://scripts/main_game_scripts/DA_Keypad.gd" id="11_jgkyn"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="15_qpaub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpaub"]
+size = Vector2(1154, 241)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4srsv"]
+size = Vector2(1152, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dugkq"]
+size = Vector2(43.5, 305)
+
+[node name="Node2D2" type="Node2D"]
+script = ExtResource("1_2pltu")
+
+[node name="Rooms" type="Node2D" parent="."]
+script = ExtResource("3_f52ns")
+
+[node name="Room1" type="Node2D" parent="Rooms"]
+position = Vector2(1, 0)
+script = ExtResource("2_dugkq")
+
+[node name="Scene1(lights)" type="Sprite2D" parent="Rooms/Room1"]
+position = Vector2(577, 325)
+scale = Vector2(0.56467015, 0.5646701)
+texture = ExtResource("9_mf81u")
+
+[node name="Keypad" type="Node2D" parent="Rooms/Room1"]
+
+[node name="Button" type="Button" parent="Rooms/Room1/Keypad"]
+offset_left = 657.0
+offset_top = 276.0
+offset_right = 690.0
+offset_bottom = 325.0
+action_mode = 0
+script = ExtResource("7_krmtw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rooms/Room1/Keypad"]
+position = Vector2(1718.0001, 322)
+scale = Vector2(0.90234476, 1.2070313)
+texture = ExtResource("2_ykeeq")
+
+[node name="ArcadeMachine" type="Node2D" parent="Rooms/Room1/Keypad"]
+position = Vector2(1, 0)
+
+[node name="RightmostStart" type="Node2D" parent="Rooms/Room1"]
+position = Vector2(904, 488)
+scale = Vector2(0.56467015, 0.5646701)
+
+[node name="ClampZone" type="CollisionShape2D" parent="Rooms/Room1"]
+position = Vector2(581, 527.5)
+shape = SubResource("RectangleShape2D_qpaub")
+
+[node name="Dialouge" type="Node2D" parent="Rooms"]
+script = ExtResource("3_ykeeq")
+
+[node name="DisplayText" type="RichTextLabel" parent="Rooms/Dialouge"]
+offset_left = 153.0
+offset_top = 446.0
+offset_right = 832.0
+offset_bottom = 528.0
+scale = Vector2(1.3, 1.3)
+text = "dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge dialouge "
+
+[node name="Frame" type="Sprite2D" parent="Rooms/Dialouge"]
+
+[node name="Room2" type="Node2D" parent="Rooms"]
+
+[node name="Scene1(lights)" type="Sprite2D" parent="Rooms/Room2"]
+position = Vector2(1718, 300.00006)
+scale = Vector2(0.56467015, 0.5646701)
+texture = ExtResource("9_mf81u")
+
+[node name="CollisionShapet2D" type="CollisionShape2D" parent="Rooms/Room2"]
+position = Vector2(1728, 324)
+shape = SubResource("RectangleShape2D_4srsv")
+
+[node name="ArcadeMachine" type="Node2D" parent="Rooms/Room2"]
+position = Vector2(1, 0)
+
+[node name="Button" type="Button" parent="Rooms/Room2/ArcadeMachine"]
+offset_left = 1618.0
+offset_top = 107.0
+offset_right = 1801.0
+offset_bottom = 226.0
+action_mode = 0
+script = ExtResource("4_2pltu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rooms/Room2/ArcadeMachine"]
+position = Vector2(1717.0001, 322)
+scale = Vector2(0.90234476, 1.2070313)
+texture = ExtResource("2_ykeeq")
+
+[node name="LeftmostStart" type="Node2D" parent="Rooms/Room2"]
+position = Vector2(1371, 524)
+
+[node name="ClampZone" type="CollisionShape2D" parent="Rooms/Room2"]
+position = Vector2(1758, 504)
+shape = SubResource("RectangleShape2D_qpaub")
+
+[node name="Keypad" type="Node2D" parent="Rooms"]
+script = ExtResource("11_jgkyn")
+
+[node name="Keypad" type="Sprite2D" parent="Rooms/Keypad"]
+position = Vector2(543.00006, -495)
+scale = Vector2(0.5876157, 0.5876157)
+texture = ExtResource("10_02kkc")
+
+[node name="Camera2D" type="Camera2D" parent="Rooms/Keypad/Keypad"]
+enabled = false
+
+[node name="Input" type="RichTextLabel" parent="Rooms/Keypad"]
+offset_left = 408.0
+offset_top = -666.0
+offset_right = 661.0
+offset_bottom = -573.0
+theme_override_colors/default_color = Color(0.5254902, 0.32941177, 0.6509804, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.7194535, 2.5509298e-06, 5.7756904e-07, 0)
+theme_override_font_sizes/normal_font_size = 60
+text = "2456"
+horizontal_alignment = 1
+
+[node name="1" type="Button" parent="Rooms/Keypad"]
+offset_left = 405.0
+offset_top = -533.0
+offset_right = 488.0
+offset_bottom = -491.0
+
+[node name="2" type="Button" parent="Rooms/Keypad"]
+offset_left = 498.0
+offset_top = -531.0
+offset_right = 581.0
+offset_bottom = -489.0
+
+[node name="3" type="Button" parent="Rooms/Keypad"]
+offset_left = 581.0
+offset_top = -532.0
+offset_right = 664.0
+offset_bottom = -490.0
+
+[node name="4" type="Button" parent="Rooms/Keypad"]
+offset_left = 410.0
+offset_top = -482.0
+offset_right = 493.0
+offset_bottom = -440.0
+
+[node name="5" type="Button" parent="Rooms/Keypad"]
+offset_left = 497.0
+offset_top = -481.0
+offset_right = 580.0
+offset_bottom = -439.0
+
+[node name="6" type="Button" parent="Rooms/Keypad"]
+offset_left = 585.0
+offset_top = -480.0
+offset_right = 668.0
+offset_bottom = -438.0
+
+[node name="7" type="Button" parent="Rooms/Keypad"]
+offset_left = 413.0
+offset_top = -435.0
+offset_right = 496.0
+offset_bottom = -393.0
+
+[node name="Clear" type="Button" parent="Rooms/Keypad"]
+offset_left = 408.0
+offset_top = -382.0
+offset_right = 491.0
+offset_bottom = -340.0
+
+[node name="8" type="Button" parent="Rooms/Keypad"]
+offset_left = 493.0
+offset_top = -432.0
+offset_right = 576.0
+offset_bottom = -390.0
+
+[node name="9" type="Button" parent="Rooms/Keypad"]
+offset_left = 585.0
+offset_top = -437.0
+offset_right = 668.0
+offset_bottom = -395.0
+
+[node name="0" type="Button" parent="Rooms/Keypad"]
+offset_left = 497.0
+offset_top = -385.0
+offset_right = 580.0
+offset_bottom = -343.0
+
+[node name="Enter" type="Button" parent="Rooms/Keypad"]
+offset_left = 585.0
+offset_top = -385.0
+offset_right = 668.0
+offset_bottom = -343.0
+
+[node name="Doors" type="Node2D" parent="Rooms"]
+position = Vector2(1, 0)
+script = ExtResource("7_l5ukw")
+
+[node name="r2_to_r1" type="Node2D" parent="Rooms/Doors"]
+position = Vector2(2812, 806)
+script = ExtResource("10_jgkyn")
+
+[node name="Area2D" type="Area2D" parent="Rooms/Doors/r2_to_r1"]
+position = Vector2(-1594, -390)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Doors/r2_to_r1/Area2D"]
+position = Vector2(-66, -1)
+shape = SubResource("RectangleShape2D_dugkq")
+
+[node name="r1_to_r2" type="Node2D" parent="Rooms/Doors"]
+position = Vector2(1085, 482)
+script = ExtResource("8_4srsv")
+
+[node name="Area2D" type="Area2D" parent="Rooms/Doors/r1_to_r2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Doors/r1_to_r2/Area2D"]
+position = Vector2(-54, -73.5)
+shape = SubResource("RectangleShape2D_dugkq")
+
+[node name="Player" parent="." instance=ExtResource("1_1oj5k")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShapet2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(576, 324)
+shape = SubResource("RectangleShape2D_4srsv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+position_smoothing_enabled = true
+script = ExtResource("15_qpaub")
+
+[connection signal="pressed" from="Rooms/Keypad/1" to="Rooms/Keypad" method="_on__pressed_1"]
+[connection signal="pressed" from="Rooms/Keypad/2" to="Rooms/Keypad" method="_on__pressed_2"]
+[connection signal="pressed" from="Rooms/Keypad/3" to="Rooms/Keypad" method="_on__pressed_3"]
+[connection signal="pressed" from="Rooms/Keypad/4" to="Rooms/Keypad" method="_on__pressed_4"]
+[connection signal="pressed" from="Rooms/Keypad/5" to="Rooms/Keypad" method="_on__pressed_5"]
+[connection signal="pressed" from="Rooms/Keypad/6" to="Rooms/Keypad" method="_on__pressed_6"]
+[connection signal="pressed" from="Rooms/Keypad/7" to="Rooms/Keypad" method="_on__pressed_7"]
+[connection signal="pressed" from="Rooms/Keypad/Clear" to="Rooms/Keypad" method="_on__pressed_clear"]
+[connection signal="pressed" from="Rooms/Keypad/8" to="Rooms/Keypad" method="_on__pressed_8"]
+[connection signal="pressed" from="Rooms/Keypad/9" to="Rooms/Keypad" method="_on__pressed_9"]
+[connection signal="pressed" from="Rooms/Keypad/0" to="Rooms/Keypad" method="_on__pressed_0"]

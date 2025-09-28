@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://1b1hwkmmjp6e"]
+
+[ext_resource type="Texture2D" uid="uid://gd8fp5mkdfcp" path="res://Assets/Backgrounds/Starter Screen.png" id="1_5kukc"]
+[ext_resource type="Script" uid="uid://crm0scrakl0iy" path="res://start.gd" id="1_b07fi"]
+[ext_resource type="Texture2D" uid="uid://4xf8ba1cot4u" path="res://Assets/Backgrounds/Main Menu/start(off).png" id="1_rlxw3"]
+[ext_resource type="Texture2D" uid="uid://bqfv4rmgs66uj" path="res://Assets/Backgrounds/Main Menu/start(pressed).png" id="2_5kukc"]
+[ext_resource type="Texture2D" uid="uid://d01an7ubfihm4" path="res://Assets/Backgrounds/Main Menu/start(hover).png" id="3_8ovav"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StarterScreen" type="Sprite2D" parent="Button_manager"]
+position = Vector2(574, 323)
+scale = Vector2(0.6004629, 0.6004629)
+texture = ExtResource("1_5kukc")
+
+[node name="Start" type="TextureButton" parent="Button_manager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 335.99997
+offset_top = 312.00003
+offset_right = 2375.0
+offset_bottom = 1689.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.23265916, 0.21900465)
+texture_normal = ExtResource("1_rlxw3")
+texture_pressed = ExtResource("2_5kukc")
+texture_hover = ExtResource("3_8ovav")
+script = ExtResource("1_b07fi")
+
+[connection signal="pressed" from="Button_manager/Start" to="Button_manager/Start" method="_on_pressed"]
