@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://3db0u6s23j44"]
+
+[ext_resource type="Script" uid="uid://qgde65eojva7" path="res://scripts/disk.gd" id="1_d2el7"]
+[ext_resource type="Texture2D" uid="uid://cdod3t18wninh" path="res://assets2/DJ_Mayhem_assets/sprites/DJ_Disk.png" id="1_ufj6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl81w"]
+atlas = ExtResource("1_ufj6a")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rgpn"]
+atlas = ExtResource("1_ufj6a")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0nl8"]
+atlas = ExtResource("1_ufj6a")
+region = Rect2(34, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dtnr"]
+atlas = ExtResource("1_ufj6a")
+region = Rect2(51, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c33a7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl81w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rgpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0nl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dtnr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oqxq1"]
+radius = 9.0
+height = 18.0
+
+[node name="Disk" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_d2el7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c33a7")
+autoplay = "default"
+frame_progress = 0.16939777
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_oqxq1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq4duhluv2jsi"]
+[gd_scene load_steps=8 format=3 uid="uid://bq4duhluv2jsi"]
 
 [ext_resource type="Texture2D" uid="uid://d33i22qwtyy82" path="res://assets2/DJ_Mayhem_assets/sprites/disco_man.png" id="1_l6tho"]
+[ext_resource type="Script" uid="uid://c7slmvxds2g3q" path="res://scripts/player_2.gd" id="1_s551d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s551d"]
 atlas = ExtResource("1_l6tho")
@@ -35,6 +36,9 @@ animations = [{
 radius = 3.0
 
 [node name="Player2" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_s551d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -5)

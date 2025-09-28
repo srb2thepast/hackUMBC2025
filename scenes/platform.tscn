@@ -1,18 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctue3l7be868h"]
 
-[ext_resource type="Texture2D" uid="uid://biyuf6rb6c2ur" path="res://assets/sprites/platforms.png" id="1_ba0x2"]
+[ext_resource type="Texture2D" uid="uid://8v13v1l53mj7" path="res://assets2/DJ_Mayhem_assets/sprites/gold_platform.png" id="1_ba0x2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlgqw"]
-size = Vector2(33, 9)
+size = Vector2(22, 6)
 
 [node name="Platform" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ba0x2")
 region_enabled = true
-region_rect = Rect2(16, 0, 33, 10)
+region_rect = Rect2(0, 0, 21, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_nlgqw")
 one_way_collision = true
